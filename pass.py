@@ -3,7 +3,6 @@ from tkinter import messagebox
 from random import randint, choice , shuffle
 import pyperclip
 
-
 violet_colour = "#9195F6" 
 green_colour = "#9BCF53"
 
@@ -42,7 +41,6 @@ def save():
                 website_entry.delete(0, END)
                 password_entry.delete(0,END)
 
-
 #----------------------------------- UI setup-----------------------------------#
 
 window = Tk()
@@ -64,7 +62,6 @@ email_label.grid(row=2, column=1, pady=3)
 password_label = Label(text="Password:", bg=green_colour)
 password_label.grid(row=3, column=1, pady=5)
 
-
 #entry
 website_entry = Entry(width=43)
 website_entry.focus()
@@ -75,13 +72,10 @@ email_entry.grid(row=2, column=2, sticky="w")
 password_entry = Entry(width=24)
 password_entry.grid(row=3, column=2, sticky="w")
 
-
 #Button 
 generate_button = Button(text="Generate Password", highlightthickness=0, bg=violet_colour, command=generate_password)
 generate_button.grid(row=3, column=2, sticky="E")
 add_button = Button(text="Add", width=36, highlightthickness=0, bg=violet_colour, command=save)
 add_button.grid(row=4, column=2)
-
-
 
 window.mainloop()
